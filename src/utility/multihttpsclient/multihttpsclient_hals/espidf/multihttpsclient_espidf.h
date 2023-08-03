@@ -33,7 +33,7 @@
 #define HTTP_CONNECT_TIMEOUT 5000
 
 // HTTP response wait timeout (ms)
-#define HTTP_WAIT_RESPONSE_TIMEOUT 5000
+#define HTTP_WAIT_RESPONSE_TIMEOUT 500
 
 // HTTP response between bytes receptions timeout (ms)
 #define HTTP_RESPONSE_BETWEEN_BYTES_TIMEOUT 500
