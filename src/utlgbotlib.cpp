@@ -549,7 +549,7 @@ uint8_t uTLGBot::getUpdates(void)
                     _json_subvalue_str, MAX_JSON_SUBVAL_STR_LEN);
 
                 // Save value in variable
-                snprintf(received_msg.from.id, MAX_ID_LENGTH, "%s", _json_subvalue_str);
+                strncpy(received_msg.from.id, _json_subvalue_str, MAX_ID_LENGTH);
             }
 
             // Check and get value of key: is_bot
@@ -580,7 +580,7 @@ uint8_t uTLGBot::getUpdates(void)
                     _json_subvalue_str, MAX_JSON_SUBVAL_STR_LEN);
 
                 // Save value in variable
-                snprintf(received_msg.from.first_name, MAX_USER_LENGTH, "%s", _json_subvalue_str);
+                strncpy(received_msg.from.first_name, _json_subvalue_str, MAX_USER_LENGTH);
             }
 
             // Check and get value of key: last_name
@@ -594,8 +594,7 @@ uint8_t uTLGBot::getUpdates(void)
                     MAX_JSON_SUBVAL_STR_LEN);
 
                 // Save value in variable
-                snprintf(received_msg.from.last_name, MAX_USER_LENGTH, "%s",
-                    _json_subvalue_str);
+                strncpy(received_msg.from.last_name, _json_subvalue_str, MAX_USER_LENGTH);
             }
 
             // Check and get value of key: username
@@ -609,8 +608,7 @@ uint8_t uTLGBot::getUpdates(void)
                     MAX_JSON_SUBVAL_STR_LEN);
 
                 // Save value in variable
-                snprintf(received_msg.from.username, MAX_USERNAME_LENGTH, "@%s",
-                    _json_subvalue_str);
+                strncpy(received_msg.from.username, _json_subvalue_str, MAX_USERNAME_LENGTH);
             }
 
             // Check and get value of key: language_code
@@ -624,8 +622,7 @@ uint8_t uTLGBot::getUpdates(void)
                     MAX_JSON_SUBVAL_STR_LEN);
 
                 // Save value in variable
-                snprintf(received_msg.from.language_code, MAX_LANGUAGE_CODE_LENGTH, "%s",
-                    _json_subvalue_str);
+                strncpy(received_msg.from.language_code, _json_subvalue_str, MAX_LANGUAGE_CODE_LENGTH);
             }
         }
     }
@@ -655,7 +652,7 @@ uint8_t uTLGBot::getUpdates(void)
                     _json_subvalue_str, MAX_JSON_SUBVAL_STR_LEN);
 
                 // Save value in variable
-                snprintf(received_msg.chat.id, MAX_ID_LENGTH, "%s", _json_subvalue_str);
+                strncpy(received_msg.chat.id, _json_subvalue_str, MAX_ID_LENGTH);
             }
 
             // Check and get value of key: type
@@ -668,7 +665,7 @@ uint8_t uTLGBot::getUpdates(void)
                     _json_subvalue_str, MAX_JSON_SUBVAL_STR_LEN);
 
                 // Save value in variable
-                snprintf(received_msg.chat.type, MAX_CHAT_TYPE_LENGTH, "%s", _json_subvalue_str);
+                strncpy(received_msg.chat.type, _json_subvalue_str, MAX_CHAT_TYPE_LENGTH);
             }
 
             // Check and get value of key: title
@@ -681,7 +678,7 @@ uint8_t uTLGBot::getUpdates(void)
                     _json_subvalue_str, MAX_JSON_SUBVAL_STR_LEN);
 
                 // Save value in variable
-                snprintf(received_msg.chat.title, MAX_CHAT_TITLE_LENGTH, "%s", _json_subvalue_str);
+                strncpy(received_msg.chat.title, _json_subvalue_str, MAX_CHAT_TITLE_LENGTH);
             }
 
             // Check and get value of key: username
@@ -694,7 +691,7 @@ uint8_t uTLGBot::getUpdates(void)
                     _json_subvalue_str, MAX_JSON_SUBVAL_STR_LEN);
 
                 // Save value in variable
-                snprintf(received_msg.chat.username, MAX_USERNAME_LENGTH, "%s", _json_subvalue_str);
+                strncpy(received_msg.chat.username, _json_subvalue_str, MAX_USERNAME_LENGTH);
             }
 
             // Check and get value of key: first_name
@@ -707,7 +704,7 @@ uint8_t uTLGBot::getUpdates(void)
                     _json_subvalue_str, MAX_JSON_SUBVAL_STR_LEN);
 
                 // Save value in variable
-                snprintf(received_msg.chat.first_name, MAX_USER_LENGTH, "%s", _json_subvalue_str);
+                strncpy(received_msg.chat.first_name, _json_subvalue_str, MAX_USER_LENGTH);
             }
 
             // Check and get value of key: last_name
@@ -720,7 +717,7 @@ uint8_t uTLGBot::getUpdates(void)
                     _json_subvalue_str, MAX_JSON_SUBVAL_STR_LEN);
 
                 // Save value in variable
-                snprintf(received_msg.chat.last_name, MAX_USER_LENGTH, "%s", _json_subvalue_str);
+                strncpy(received_msg.chat.last_name, _json_subvalue_str, MAX_USER_LENGTH);
             }
 
             // Check and get value of key: is_bot
