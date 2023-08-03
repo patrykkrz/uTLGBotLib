@@ -165,14 +165,8 @@ void wifi_init_stat(void)
 
     // Prepare WiFi SSID and Password
     static wifi_config_t wifi_cfg;
-    size_t len = strlen(WIFI_SSID);
-    if (len > MAX_LENGTH_WIFI_SSID)
-    {   len = MAX_LENGTH_WIFI_SSID;   }
-    memcpy(wifi_cfg.sta.ssid, WIFI_SSID, len);
-    len = strlen(WIFI_PASS);
-    if (len > MAX_LENGTH_WIFI_PASS)
-    {   len = MAX_LENGTH_WIFI_PASS;   }
-    memcpy((void*)wifi_cfg.sta.ssid, (const void*)WIFI_PASS, len);
+    strncpy((char*) wifi_cfg.sta.ssid, WIFI_SSID, MAX_LENGTH_WIFI_SSID);
+    strncpy((char*) wifi_cfg.sta.password, WIFI_PASS, MAX_LENGTH_WIFI_PASS);
     //wifi_cfg.sta.thresholdwifi_cfg.sta.authmode = WIFI_AUTH_WPA_WPA2_PSK;
     //wifi_cfg.sta.sae_pwe_h2e = WPA3_SAE_PWE_BOTH;
 
